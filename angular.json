@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "combine-latest-bug": {
+    "rxjs-state-mgmt-bug": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -44,19 +44,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/combine-latest-bug",
+            "outputPath": "dist/rxjs-state-mgmt-bug",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -93,21 +88,22 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "combine-latest-bug:build"
+            "browserTarget": "rxjs-state-mgmt-bug:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "combine-latest-bug:build:production"
+              "browserTarget": "rxjs-state-mgmt-bug:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "combine-latest-bug:build"
+            "browserTarget": "rxjs-state-mgmt-bug:build"
           }
         }
       }
-    }},
-  "defaultProject": "combine-latest-bug"
+    }
+  },
+  "defaultProject": "rxjs-state-mgmt-bug"
 }
